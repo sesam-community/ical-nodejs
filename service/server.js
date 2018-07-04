@@ -26,10 +26,17 @@ app.get("/entities", function (request, response) {
       return;
     }
     response.writeHead(200, {"Content-Type": "application/json"});
+    let first = true;
+    response.write("[");
     Object.keys(data).forEach(key => {
+      if (first) {
+        first = false;
+      } else {
+        response.write(",");
+      }
       response.write(JSON.stringify(Object.assign({_id: key}, data[key])));
     });
-    response.end();
+    response.end("]");
   });
 });
 
