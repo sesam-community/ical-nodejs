@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.1",
+    "node-ical": "^0.7.0"
+  }
+}
