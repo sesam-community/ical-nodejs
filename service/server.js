@@ -28,7 +28,7 @@ app.get("/entities", function (request, response) {
     response.writeHead(200, {"Content-Type": "application/json"});
     var first = true;
     response.write("[");
-    Object.keys(data).forEach(key => {
+    Object.keys(data).forEach(function(key) {
       if (first) {
         first = false;
       } else {
